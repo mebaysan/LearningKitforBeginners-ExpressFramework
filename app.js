@@ -8,14 +8,14 @@ app.set('view engine', 'pug');
 app.set('views', './views');
 
 const adminRoutes = require('./routes/admin');
-const userRoutes = require('./routes/user');
+const shopRoutes = require('./routes/shop');
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // routes
 app.use('/admin', adminRoutes);
-app.use(userRoutes);
+app.use(shopRoutes);
 
 
 
